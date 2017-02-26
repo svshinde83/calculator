@@ -1,15 +1,15 @@
 # calculator
 This repository is an application to do arithmetic calculations.
 
-Softwares used:
+Prerequisites / Softwares used:
 
 Java 8
 
-Spring Boot
+Spring Boot 1.5.1.RELEASE
 
-Maven
+Maven latest version 3.x>
 
-Run the application:
+To Run the application:
 
 Open terminal and navigate to the root and issue following command : mvn spring-boot:run
 
@@ -28,4 +28,4 @@ Provide numbers greater than 0 with or without decimal places and operations
 
  Multiplication: 45 * 6654
 
-
+ To Quit : q or Q
