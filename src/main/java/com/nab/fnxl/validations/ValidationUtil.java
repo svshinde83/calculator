@@ -2,6 +2,7 @@ package com.nab.fnxl.validations;
 
 import java.util.List;
 import java.util.regex.Pattern;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -19,8 +20,6 @@ public class ValidationUtil {
     public List<String> getMyList() {
         return myList;
     }
-    //read user input
-    // populate userInput
 
     public boolean validateUserInput(String userInput) {
         boolean isValid = false;

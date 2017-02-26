@@ -7,7 +7,5 @@ public interface DisplayInformation {
 
     void promptUserInformation();
 
-    String displayTerminateInfo();
-
-    String consoleExitMessage();
+    void printExitMessage();
 }

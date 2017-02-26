@@ -5,6 +5,6 @@ package com.nab.fnxl.exceptions;
  */
 public class OperationException extends Throwable {
     public OperationException(String exceptionMessage) {
-
+        super(exceptionMessage);
     }
 }

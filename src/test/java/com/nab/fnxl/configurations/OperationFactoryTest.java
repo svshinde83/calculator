@@ -32,6 +32,7 @@ public class OperationFactoryTest {
     public void testGetAdditionWithUnknownKey() throws OperationException {
 
         Mockito.doThrow(OperationException.class).when(OperationFactory.getOperation("!"));
+        operationFactory.getOperation("!");
 
     }
 
