@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  * Created by svshinde83 on 25/02/2017.
  */
 @Component
-public  class AbstractDisplayInfo implements DisplayInformation {
+public class DisplayInfo implements DisplayInformation {
 
     @Value("${user.console.exit.message}")
     private String displayQuitMessage;

@@ -6,21 +6,31 @@ import com.nab.fnxl.service.arithmetic.Operation;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by svshinde83 on 25/02/2017.
  */
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class AdditionTest {
 
-    private Operation add;
+    @Autowired
+    private Addition add;
 
     private List<String> stringsDelimitedList;
 
     @Before
     public void setup() {
-        add = new Addition();
         stringsDelimitedList = new ArrayList<>(3);
 
     }
@@ -29,8 +39,7 @@ public class AdditionTest {
     public void testFloatSum() throws OperationException {
         stringsDelimitedList.add("22.5");
         stringsDelimitedList.add("36.5");
-        System.out.println(add.calculate(stringsDelimitedList));
-
+        assertEquals("59.0", add.calculate(stringsDelimitedList).toPlainString());
     }
 
 
@@ -38,7 +47,7 @@ public class AdditionTest {
     public void testWholeNumberSum() throws OperationException {
         stringsDelimitedList.add("45");
         stringsDelimitedList.add("565");
-        System.out.println(add.calculate(stringsDelimitedList));
+        assertEquals("610", add.calculate(stringsDelimitedList).toPlainString());
 
     }
 
@@ -47,14 +56,14 @@ public class AdditionTest {
     public void testNegativeNumberSum() throws OperationException {
         stringsDelimitedList.add("-12.5");
         stringsDelimitedList.add("-898");
-        System.out.println(add.calculate(stringsDelimitedList));
+        assertEquals("-910.5", add.calculate(stringsDelimitedList).toPlainString());
     }
 
     @Test
     public void testNegativePositiveNumberSum() throws OperationException {
         stringsDelimitedList.add("-89");
         stringsDelimitedList.add("56");
-        System.out.println(add.calculate(stringsDelimitedList));
+        assertEquals("-33", add.calculate(stringsDelimitedList).toPlainString());
 
     }
 

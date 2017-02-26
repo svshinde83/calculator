@@ -4,10 +4,12 @@ import com.nab.fnxl.exceptions.OperationException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by svshinde83 on 25/02/2017.
  */
+@Component
 public class Division implements Operation {
 
     @Override

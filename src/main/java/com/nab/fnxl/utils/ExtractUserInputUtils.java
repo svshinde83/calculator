@@ -50,15 +50,6 @@ public class ExtractUserInputUtils {
         return valuesAsList;
     }
 
-    public static void main(String[] args) {
-        ExtractUserInputUtils extractUserInputUtils = new ExtractUserInputUtils();
-
-        String values = "-1.765-5.334";
-        String [] test = values.split("^[0-9]+[.]?[0-9]* ?[-] ?[0-9]+[.]?[0-9]*$");
-        List<String> stringsDelimited = extractUserInputUtils.getStringsDelimited(values);
-        System.out.println(stringsDelimited);
-    }
-
     private void extractToList(List<String> valuesAsList, String[] valuesArray) {
         for (String aValues1 : valuesArray) {
             valuesAsList.add(aValues1.trim());

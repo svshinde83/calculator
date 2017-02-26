@@ -28,7 +28,7 @@ public class OperationFactory {
     }};
 
     public static Operation getOperation(String key) throws OperationException {
-        logger.info("fetching operation for key : {} ", key);
+        logger.debug("fetching operation for key : {} ", key);
         Operation operation = operationsMap.get(key);
 
         if (null == operation) {

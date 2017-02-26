@@ -2,19 +2,24 @@ package com.nab.fnxl.service;
 
 import com.nab.fnxl.configurations.OperationFactory;
 import com.nab.fnxl.exceptions.OperationException;
-import com.nab.fnxl.scanner.AbstractDisplayInfo;
+import com.nab.fnxl.scanner.DisplayInfo;
 import com.nab.fnxl.service.arithmetic.Operation;
 import com.nab.fnxl.utils.ExtractUserInputUtils;
 import com.nab.fnxl.validations.ValidationUtil;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Scanner;
-import org.slf4j.LoggerFactory;
+import org.junit.Rule;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
+
+
+import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.emptyStandardInputStream;
 
 /**
  * Created by svshinde83 on 25/02/2017.
@@ -24,23 +29,27 @@ import org.springframework.stereotype.Service;
 @Qualifier(value = "scanUserInput")
 public class ScanUserInput {
 
+    @Rule
+    public final TextFromStandardInputStream systemInMock = emptyStandardInputStream();
+
     private static final Logger logger = LoggerFactory.getLogger(ScanUserInput.class);
 
     @Autowired
     private ValidationUtil validationUtil;
 
     @Autowired
-    private AbstractDisplayInfo displayInfo;
+    private DisplayInfo displayInfo;
 
     @Autowired
     private ExtractUserInputUtils extractUserInputUtils;
     @Autowired
     private OperationFactory factory;
 
+    private String userInput;
+
     public String readUserInput() {
         Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.nextLine().trim();
-
+            userInput = scanner.nextLine().trim();
         return userInput;
     }
 
@@ -67,7 +76,7 @@ public class ScanUserInput {
                     BigDecimal result = operation.calculate(stringsDelimited);
                     System.out.println("Result : " + result);
 
-                }else{
+                } else {
                     System.out.println("Please provide natural numbers !! ");
                 }
             } catch (OperationException e) {

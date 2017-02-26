@@ -2,10 +2,12 @@ package com.nab.fnxl.service.arithmetic;
 
 import java.math.BigDecimal;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by svshinde83 on 25/02/2017.
  */
+@Component
 public class Multiplication implements Operation {
 
     public BigDecimal calculate(List<String> operandsList) {

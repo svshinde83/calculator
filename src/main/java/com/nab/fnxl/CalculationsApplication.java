@@ -12,15 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 public class CalculationsApplication {
 
-   /* @Autowired
-    private ValidationUtil util;
-
-    @Autowired
-    private CalculatorConfig calculatorConfig;
-
-    @Autowired
-    private DisplayArithmeticInfo displayArithmeticInfo;*/
-
     @Autowired
     private ScanUserInput scanUserInput;
 

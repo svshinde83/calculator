@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class ValidationUtil {
 
 
-    @Value("#{'${user.input.regex.pattern}'.split(',')}")
+    @Value("${user.input.regex.pattern}")
     private List<String> myList;
 
 
