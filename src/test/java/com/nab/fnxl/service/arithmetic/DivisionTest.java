@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -64,6 +65,15 @@ public class DivisionTest {
         stringsDelimitedList.add("8972");
         BigDecimal result = div.calculate(stringsDelimitedList);
         Assert.assertEquals(new BigDecimal("-1.73"), result);
+
+    }
+
+    @Test(expected = OperationException.class)
+    public void testDivisionByZero() throws OperationException {
+        stringsDelimitedList.add("-15546");
+        stringsDelimitedList.add("0");
+        Mockito.when(div.calculate(stringsDelimitedList)).thenThrow(OperationException.class);
+
 
     }
 

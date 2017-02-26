@@ -7,10 +7,16 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by svshinde83 on 25/02/2017.
+ * <p>
+ * This class does the addition work.
  */
 @Component
 public class Addition implements Operation {
 
+    /**
+     * @param operandsList accepts as a parameter
+     * @return addition calculations from the list
+     */
     @Override
     public BigDecimal calculate(List<String> operandsList) {
 

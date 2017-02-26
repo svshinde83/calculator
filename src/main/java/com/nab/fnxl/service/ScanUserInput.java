@@ -9,8 +9,6 @@ import com.nab.fnxl.validations.ValidationUtil;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Scanner;
-import org.junit.Rule;
-import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +17,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 
-import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.emptyStandardInputStream;
-
 /**
  * Created by svshinde83 on 25/02/2017.
  */
@@ -28,9 +24,6 @@ import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.emp
 @ComponentScan
 @Qualifier(value = "scanUserInput")
 public class ScanUserInput {
-
-    @Rule
-    public final TextFromStandardInputStream systemInMock = emptyStandardInputStream();
 
     private static final Logger logger = LoggerFactory.getLogger(ScanUserInput.class);
 
@@ -47,12 +40,27 @@ public class ScanUserInput {
 
     private String userInput;
 
+    /**
+     * Reads the user input on command line / terminal
+     *
+     * @return
+     */
     public String readUserInput() {
         Scanner scanner = new Scanner(System.in);
-            userInput = scanner.nextLine().trim();
+        userInput = scanner.nextLine().trim();
         return userInput;
     }
 
+    /**
+     * This function executes the caculator flow.
+     * 1. Prompts the user to enter input to calculate.
+     * 2. Reads the user input
+     * 3. Checks if the user wants to quit the app.
+     * 4. Validate the user input
+     * 5. Extract the user Input into a List to compute further
+     * 6.Calculate the operands using the operator.
+     * 7. Handles if any invalid input entered or if any exceptions during calculations.
+     */
     public void init() {
         while (true) {
 
@@ -77,10 +85,10 @@ public class ScanUserInput {
                     System.out.println("Result : " + result);
 
                 } else {
-                    System.out.println("Please provide natural numbers !! ");
+                    System.out.println("Please provide natural numbers or any valid operation out of + or - or /  or *");
                 }
             } catch (OperationException e) {
-                System.out.println("Please provide natural numbers !! ");
+                System.out.println("Please provide natural numbers or any valid operation out of + or - or /  or * ");
             }
 
         }

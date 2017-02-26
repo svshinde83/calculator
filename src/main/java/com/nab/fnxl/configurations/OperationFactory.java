@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by svshinde83 on 25/02/2017.
+ * <p>
+ * This is a factory pattern implementation to get Operations from an operationsMap.
  */
 @Component
 public class OperationFactory {
@@ -27,6 +29,12 @@ public class OperationFactory {
         put("/", new Division());
     }};
 
+
+    /**
+     * @param key Operation key like : + or - to input
+     * @return Operation associated with the key
+     * @throws OperationException if the key is not found in the allowable list then throws exception.
+     */
     public static Operation getOperation(String key) throws OperationException {
         logger.debug("fetching operation for key : {} ", key);
         Operation operation = operationsMap.get(key);

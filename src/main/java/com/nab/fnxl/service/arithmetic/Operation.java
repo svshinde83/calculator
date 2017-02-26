@@ -6,6 +6,9 @@ import java.util.List;
 
 /**
  * Created by svshinde83 on 25/02/2017.
+ * <p>
+ * Api to calculate arithmetic operations.
+ *
  */
 public interface Operation {
 

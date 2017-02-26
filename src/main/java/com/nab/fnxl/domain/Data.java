@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 
 /**
  * Created by svshinde83 on 25/02/2017.
+ * <p>
+ * Domain object which holds the user input operands
  */
 public class Data {
 

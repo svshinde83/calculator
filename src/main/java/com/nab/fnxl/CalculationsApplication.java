@@ -8,6 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * Start of the Calculator app using Spring Boot.
+ *
+ */
 @SpringBootApplication
 @ComponentScan
 public class CalculationsApplication {
@@ -15,6 +19,10 @@ public class CalculationsApplication {
     @Autowired
     private ScanUserInput scanUserInput;
 
+    /**
+     * static method to initiate the call to ScanUserInput.init() function.
+     * @param args
+     */
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(CalculationsApplication.class, args);
 

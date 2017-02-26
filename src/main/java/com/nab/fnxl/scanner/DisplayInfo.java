@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by svshinde83 on 25/02/2017.
+ * <p>
+ * This class handles the user interactions by displaying and reading the contents from application.properties:
+ * 1. prompting information to print on console.
+ * 2. Informing the user if he chose to quit.
  */
 @Component
 public class DisplayInfo implements DisplayInformation {
