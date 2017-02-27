@@ -35,8 +35,6 @@ public class ScanUserInput {
 
     @Autowired
     private ExtractUserInputUtils extractUserInputUtils;
-    @Autowired
-    private OperationFactory factory;
 
     private String userInput;
 
