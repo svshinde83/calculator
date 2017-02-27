@@ -24,6 +24,12 @@ public class DisplayInfoTest {
     @Autowired
     private DisplayInfo displayInfo;
 
+    /**
+     * Ignored this test as space comparison in the properties file differs in spaces , tabs and indentation
+     * from the properties file.
+     *
+     * @throws Exception
+     */
     @Ignore
     @Test
     public void testPrintExitMessage() throws Exception {
@@ -34,6 +40,12 @@ public class DisplayInfoTest {
         assertEquals(expectedOutput, outContent);
     }
 
+    /**
+     * Ignored this test as space comparison in the properties file differs in spaces , tabs and indentation
+     * from the properties file.
+     *
+     * @throws Exception
+     */
     @Ignore
     @Test
     public void testPromptUserInformation() throws Exception {
