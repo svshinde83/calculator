@@ -16,8 +16,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 public class CalculationsApplication {
 
-    @Autowired
-    private ScanUserInput scanUserInput;
 
     /**
      * static method to initiate the call to ScanUserInput.init() function.

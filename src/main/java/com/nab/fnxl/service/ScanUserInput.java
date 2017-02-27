@@ -50,7 +50,7 @@ public class ScanUserInput {
     }
 
     /**
-     * This function executes the caculator flow.
+     * This function executes the calculator flow.
      * 1. Prompts the user to enter input to calculate.
      * 2. Reads the user input
      * 3. Checks if the user wants to quit the app.
