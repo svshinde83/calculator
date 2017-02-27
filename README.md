@@ -1,7 +1,5 @@
 # calculator
-## This repository is an application to do sort a list of alphanumeric strings.
-
-
+## This repository is an application to do arithmetic calculations.
 
 ### Dependencies:
 
