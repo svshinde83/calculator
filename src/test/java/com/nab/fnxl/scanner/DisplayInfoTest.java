@@ -5,14 +5,12 @@ import java.io.PrintStream;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.doReturn;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by svshinde83 on 27/02/2017.
