@@ -23,27 +23,27 @@ public class ExtractUserInputUtilsTest {
 
 
     @Test
-    public void testGetStringsDelimitedSubstraction() throws Exception {
+    public void testGetStringsDelimited_Substraction() throws Exception {
         List<String> stringsDelimited = utils.getStringsDelimited("456 / 5464");
         assertEquals("[456, 5464, /]", stringsDelimited.toString());
     }
 
     @Test
-    public void testGetStringsDelimitedmMultiplication() throws Exception {
+    public void testGetStringsDelimited_Multiplication() throws Exception {
         List<String> stringsDelimited = utils.getStringsDelimited("1235 * 9999");
         assertEquals("[1235, 9999, *]", stringsDelimited.toString());
     }
 
 
     @Test
-    public void testGetStringsDelimitedAddition() throws Exception {
+    public void testGetStringsDelimited_Addition() throws Exception {
         List<String> stringsDelimited = utils.getStringsDelimited("1983000 + 00000");
         assertEquals("[1983000, 00000, +]", stringsDelimited.toString());
     }
 
 
     @Test
-    public void testGetStringsDelimitedDivision() throws Exception {
+    public void testGetStringsDelimited_Division() throws Exception {
         List<String> stringsDelimited = utils.getStringsDelimited("252 - 199.33");
         assertEquals("[252, 199.33, -]", stringsDelimited.toString());
     }

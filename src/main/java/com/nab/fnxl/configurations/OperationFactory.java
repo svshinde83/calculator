@@ -29,7 +29,6 @@ public class OperationFactory {
         put("/", new Division());
     }};
 
-
     /**
      * @param key Operation key like : + or - to input
      * @return Operation associated with the key

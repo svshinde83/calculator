@@ -16,14 +16,14 @@ public class BootCalculatorApplication {
 
 
     /**
-     * static method to initiate the call to CalculatorApplication.calculate(args) function.
+     * method to initiate the call to CalculatorApplication.calculate(args) function.
      * @param args
      */
     public static void main(String[] args) {
 
         ConfigurableApplicationContext ctx = SpringApplication.run(BootCalculatorApplication.class, args);
 //        CalculatorApplication calculatorApplication = (CalculatorApplication) ctx.getBean("calculatorApplication");
-//        calculatorApplication.calculate();
+//        calculatorApplication.calculate(args);
     }
 
 }
