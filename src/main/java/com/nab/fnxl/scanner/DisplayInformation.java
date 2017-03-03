@@ -10,7 +10,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface DisplayInformation {
 
-    void promptUserInformation();
-
     void printExitMessage();
 }

@@ -2,7 +2,6 @@ package com.nab.fnxl.service.arithmetic;
 
 import java.math.BigDecimal;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**

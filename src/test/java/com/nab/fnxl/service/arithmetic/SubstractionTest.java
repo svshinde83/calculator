@@ -1,6 +1,7 @@
 package com.nab.fnxl.service.arithmetic;
 
 import com.nab.fnxl.exceptions.OperationException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
@@ -28,24 +29,21 @@ public class SubstractionTest {
     @Before
     public void setup() {
         stringsDelimitedList = new ArrayList<>(3);
-
     }
 
     @Test
     public void testFloatSubstraction() throws OperationException {
         stringsDelimitedList.add("798.5");
         stringsDelimitedList.add("4564.5465");
-        assertEquals("-3766.0465",subtract.calculate(stringsDelimitedList).toPlainString());
+        assertEquals("-3766.0465",subtract.calculate(stringsDelimitedList).toString());
 
     }
-
 
     @Test
     public void testWholeNumberSubstraction() throws OperationException {
         stringsDelimitedList.add("45");
         stringsDelimitedList.add("565");
-        System.out.println(subtract.calculate(stringsDelimitedList));
-        assertEquals("-520",subtract.calculate(stringsDelimitedList).toPlainString());
+        assertEquals("-520",subtract.calculate(stringsDelimitedList).toString());
 
     }
 
@@ -54,14 +52,14 @@ public class SubstractionTest {
     public void testNegativeNumberSubstraction() throws OperationException {
         stringsDelimitedList.add("-654897");
         stringsDelimitedList.add("-15165465");
-        assertEquals("14510568",subtract.calculate(stringsDelimitedList).toPlainString());
+        assertEquals("14510568",subtract.calculate(stringsDelimitedList).toString());
     }
 
     @Test
     public void testNegativePositiveNumberSubstraction() throws OperationException {
         stringsDelimitedList.add("-1254");
         stringsDelimitedList.add("54132");
-        assertEquals("-55386",subtract.calculate(stringsDelimitedList).toPlainString());
+        assertEquals("-55386",subtract.calculate(stringsDelimitedList).toString());
 
     }
 
