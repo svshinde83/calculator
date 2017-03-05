@@ -17,6 +17,7 @@ calculator\src\test\java\com\nab\fnxl\service\CalculatorApplicationTest.java
 ### Maven
 
 Alternatively you can use the following commands from a command prompt (terminal) by accessing the root folder :
+
 cd c:\iws\calculator
 
 The following Maven goals are the most commonly used.
