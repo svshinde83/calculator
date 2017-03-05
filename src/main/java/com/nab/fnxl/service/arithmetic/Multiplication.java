@@ -14,7 +14,7 @@ public class Multiplication implements Operation {
 
     /**
      * @param operandsList accepts as a parameter
-     * @return multipication calculations from the list
+     * @return multiplication calculations from the list
      */
     public BigDecimal calculate(List<String> operandsList) {
 

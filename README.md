@@ -14,11 +14,13 @@ The project requires the following dependencies be installed on the host machine
 Test the outcome of the application run the test cases under from your IDE like Eclipse or IntelliJ:
 calculator\src\test\java\com\nab\fnxl\service\CalculatorApplicationTest.java
 
+Alternatively you can use the following below Maven commands from a command prompt (terminal) by accessing the root folder :
+
+like in my case on a Windows machine : cd c:\iws\calculator
+
 ### Maven
 
-Alternatively you can use the following commands from a command prompt (terminal) by accessing the root folder :
 
-cd c:\iws\calculator
 
 The following Maven goals are the most commonly used.
 
