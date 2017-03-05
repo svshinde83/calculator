@@ -8,12 +8,16 @@ The project requires the following dependencies be installed on the host machine
 
 * Maven latest version 3.x and above
 
+
 ## Running:
 
-Run the test cases under:
+Test the outcome of the application run the test cases under from your IDE like Eclipse or IntelliJ:
 calculator\src\test\java\com\nab\fnxl\service\CalculatorApplicationTest.java
 
 ### Maven
+
+Alternatively you can use the following commands from a command prompt (terminal) by accessing the root folder :
+cd c:\iws\calculator
 
 The following Maven goals are the most commonly used.
 
