@@ -17,13 +17,15 @@ public class BootCalculatorApplication {
 
     /**
      * method to initiate the call to CalculatorApplication.calculate(args) function.
+     * This is the hook to get the calculator application running by passing in the arguments.
+     * The code is commented as of now to enable the TDD testing.
      * @param args
      */
     public static void main(String[] args) {
 
         ConfigurableApplicationContext ctx = SpringApplication.run(BootCalculatorApplication.class, args);
-//        CalculatorApplication calculatorApplication = (CalculatorApplication) ctx.getBean("calculatorApplication");
-//        calculatorApplication.calculate(args);
+        /*CalculatorApplication calculatorApplication = (CalculatorApplication) ctx.getBean("calculatorApplication");
+        calculatorApplication.calculate(String.valueOf(args));*/
     }
 
 }
